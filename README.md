@@ -1,6 +1,6 @@
 # digital_electronics_2
 
-# Ondřej Nesvadba
+### Ondřej Nesvadba
 ### _VUT FEKT_
 ### __Electronics and telecomunications__
 ### IV. semestr
