@@ -1,5 +1,8 @@
 # digital_electronics_2
 
-###Ondřej Nesvadba
-###230293
-###FEKT VUT BRNO
+# Ondřej Nesvadba
+### _VUT FEKT_
+### __Electronics and telecomunications__
+### IV. semestr
+###
+## PC excercise
