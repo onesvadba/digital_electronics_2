@@ -3,7 +3,6 @@
 ### Ondřej Nesvadba
 #### 230293
 ### VUT FEKT BRNO
-### Electronics and telecomunications
+#### Electronics and telecomunications
 ### V. semestr
-###
 ## PC excercises
