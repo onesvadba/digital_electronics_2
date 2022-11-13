@@ -109,7 +109,6 @@ ISR(TIMER1_OVF_vect)
       air.humid_dec = twi_read_ack();
       air.temp_int = twi_read_ack();
       air.temp_dec = twi_read_nack();
-      
       twi_stop();
 
       //Humidity
@@ -133,7 +132,7 @@ ISR(TIMER1_OVF_vect)
     */
 
 
-    sla = 68;
+    sla = 0x68;
     ack = twi_start(sla, TWI_WRITE);
     if (ack == 0) {
       twi_write(0x00);
@@ -141,18 +140,18 @@ ISR(TIMER1_OVF_vect)
       twi_start(sla, TWI_READ);
       Time.seconds = twi_read_ack();
       Time.minutes = twi_read_ack();
-      Time.hours = twi_read_ack();
+      Time.hours = twi_read_nack();
+      twi_stop();
 
     //Time
-      itoa(Time.hours, string, 10);
+      itoa(Time.hours, string, 16);
       uart_puts(string);
       uart_puts(":");
-      itoa(Time.minutes, string, 10);
+      itoa(Time.minutes, string, 16);
       uart_puts(string);
       uart_puts(":");
-      itoa(Time.seconds, string, 10);
+      itoa(Time.seconds, string, 16);
       uart_puts(string);
-      uart_puts(":");
 
       uart_puts("\r\n");
 
